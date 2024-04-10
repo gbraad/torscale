@@ -19,8 +19,8 @@ done
 
 echo 'Tailscale serve Tor proxy...'
 
-/app/tailscale serve tcp:9050 tcp://localhost:9050
-/app/tailscale serve tcp:9051 tcp://localhost:9051
+/app/tailscale serve --bg --tcp 9050 tcp://localhost:9050
+/app/tailscale serve --bg --tcp 9051 tcp://localhost:9051
 
 echo 'Tailscale started'
 
