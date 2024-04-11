@@ -2,7 +2,7 @@
 
 echo 'Starting up Tailscale...'
 
-/app/tailscaled --verbose=1 --port 41641 --tun=userspace-networking --socks5-server=localhost:3215 &
+/app/tailscaled --verbose=1 --port 41641 --tun=userspace-networking --socks5-server=localhost:3215 --state=mem: &
 sleep 5
 if [ ! -S /var/run/tailscale/tailscaled.sock ]; then
     echo "tailscaled.sock does not exist. exit!"
